@@ -1,0 +1,25 @@
+﻿{
+  "authors": [ "liuhaoyang" ],
+  "dependencies": {
+    "AspectCore.Abstractions": "1.1.0-rc1-13270"
+  },
+  "description": "Method Intruder extension system for AspectCore Framework.",
+  "frameworks": {
+    "netstandard1.6": {},
+    "net45": {}
+  },
+  "packOptions": {
+    "iconUrl": "https://avatars1.githubusercontent.com/u/19426425?v=3&s=200",
+    "licenseUrl": "https://mit-license.org/",
+    "owners": [ "liuhaoyang" ],
+    "releaseNotes": "Method Intruder extension system for AspectCore Framework.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/AspectCore/Intruder"
+    },
+    "tags": [ "Method Intruder", "Aop", "DynamicProxy", "Interceptor" ]
+  },
+  "projectUrl": "https://github.com/AspectCore/Intruder",
+  "title": "AspectCore.Extensions.Intruder",
+  "version": "1.1.0-rc1-13250"
+}
