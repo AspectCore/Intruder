@@ -2,7 +2,7 @@
   "authors": [ "liuhaoyang" ],
   "dependencies": {
     "AspectCore.Abstractions": "1.1.0-rc1-13270",
-    "AspectCore.Extensions.Configuration": "1.1.0-rc1-13250"
+    "AspectCore.Extensions.Configuration": "1.1.0-rc1-13270"
   },
   "description": "Method Intruder extension system for AspectCore Framework.",
   "frameworks": {
@@ -22,5 +22,5 @@
   },
   "projectUrl": "https://github.com/AspectCore/Intruder",
   "title": "AspectCore.Extensions.Intruder",
-  "version": "1.1.0-rc1-13250"
+  "version": "1.1.0-rc1-13270"
 }

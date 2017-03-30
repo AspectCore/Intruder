@@ -9,15 +9,17 @@ namespace AspectCore.Extensions.Intruder
     {
         public override int Order { get; set; } = -300;
 
+        public override bool AllowMultiple { get; } = false;
+
         public async override Task Invoke(AspectContext context, AspectDelegate next)
         {
-            var intruders = (IEnumerable<IAspectIntruderProvider>)context.ServiceProvider.GetService(typeof(IEnumerable<IAspectIntruderProvider>));
-            var intrudersMap = intruders.ToDictionary(x => x.IntruderType, x => x);
+            var intruderProviders = (IEnumerable<IAspectIntruderProvider>)context.ServiceProvider.GetService(typeof(IEnumerable<IAspectIntruderProvider>));
+            var intruderProvidersMap = intruderProviders.ToDictionary(x => x.IntruderType, x => x);
             foreach (var parameter in context.Parameters)
             {
                 var paraType = parameter.ParameterType;
                 IAspectIntruderProvider intruderProvider;
-                if (intrudersMap.TryGetValue(paraType, out intruderProvider))
+                if (intruderProvidersMap.TryGetValue(paraType, out intruderProvider))
                 {
                     var intruder = await intruderProvider.GetIntruderAsync(context);
                     parameter.Value = intruder;
